@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <style>
+    /* Inline styles for header */
+    header {
+        background-color: hsl(120, 58%, 11%); /* Dark green background color */
+        padding: 20px; /* Adjust padding for a more spacious feel */
+        text-align: center; /* Center-align header content */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+    }
+
+    header h1 {
+        font-size: 2em; /* Decrease font size of the title */
+        margin: 0; /* Remove default margin */
+        letter-spacing: 1px; /* Add some space between letters */
+        text-transform: lowercase; /* Keep text lowercase */
+        color: white; /* Change text color to white */
+    }
+
+    nav a {
+        margin: 0 20px; /* Increase spacing between links */
+        text-decoration: none; /* Remove underline */
+        font-weight: bold; /* Bold text for navigation */
+        color: white; /* Keep text color white */
+        transition: color 0.3s; /* Add transition for hover effect */
+    }
+
+    nav a:hover {
+        color: #d4af37; /* Change color on hover (gold) */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1> <!-- Fixed the closing tag -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <form action="#" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Random Map -->
+    <div class="map-container" style="margin-top: 20px;">
+      <h2>Our Location</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345085633!2d144.9537353153169!3d-37.816279979751524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f74d2a9%3A0x5045675218ceedb!2sVersace!5e0!3m2!1sen!2sau!4v1631853805985!5m2!1sen!2sau"
+        width="1500"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Versace | <a href="https://www.versace.com">Official Website</a></p>
+  </footer>
+</body>
+</html>

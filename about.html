@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Versace</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <style>
+    /* Keyframes for fade-in effect */
+    @keyframes fadeIn {
+      from {
+        opacity: 0; /* Start completely transparent */
+        transform: translateY(20px); /* Move the image slightly down */
+      }
+      to {
+        opacity: 1; /* End fully opaque */
+        transform: translateY(0); /* Reset position */
+      }
+    }
+
+    /* Additional CSS to center the image */
+    .hero-image, .images-section {
+      text-align: center; /* Center-aligns the content */
+      margin: 20px 0; /* Add space around the sections */
+    }
+
+    .hero-image img {
+      width: 50%; /* Set the hero image width to 50% of its container */
+      max-width: 300px; /* Set a maximum width for the hero image */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 10px; /* Optional: Add rounded corners to the image */
+      margin-bottom: 20px; /* Space below the hero image */
+      transition: transform 0.3s ease; /* Smooth transition for the scaling effect */
+      animation: fadeIn 0.5s ease forwards; /* Apply fade-in animation */
+      opacity: 0; /* Start with images hidden */
+    }
+
+    .images-section img {
+      width: 40%; /* Set the images in this section to 40% of their container */
+      max-width: 200px; /* Set a maximum width for the smaller images */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 10px; /* Optional: Add rounded corners */
+      margin-bottom: 20px; /* Space below each image */
+      transition: transform 0.3s ease; /* Smooth transition for the scaling effect */
+      animation: fadeIn 0.5s ease forwards; /* Apply fade-in animation */
+      opacity: 0; /* Start with images hidden */
+    }
+
+    .images-section img:hover,
+    .hero-image img:hover {
+      transform: scale(1.1); /* Scale up the image to 110% on hover */
+    }
+
+    /* Header styles */
+    header {
+      background-color: #0a380a; /* Dark green color */
+      padding: 10px 0; /* Add padding for aesthetics */
+    }
+
+    header h1, 
+    header nav a {
+      color: white; /* Set text color to white for contrast */
+      text-align: center; /* Center-align header text */
+    }
+
+    nav a {
+      margin: 0 15px; /* Add spacing between navigation links */
+      text-decoration: none; /* Remove underline from links */
+    }
+
+    /* Skip link styles */
+    .skip-link {
+      position: absolute;
+      left: -9999px; /* Hide off-screen */
+      top: 0;
+    }
+
+    .skip-link:focus {
+      left: 10px; /* Move on-screen when focused */
+      top: 10px; /* Position below the top of the viewport */
+      z-index: 1000; /* Ensure it is above other content */
+      background: #0a380a; /* Background color for visibility */
+      color: white; /* Text color */
+      padding: 8px; /* Padding for aesthetics */
+      border-radius: 4px; /* Rounded corners */
+    }
+
+    /* Main content styles */
+    main {
+      padding: 20px; /* Add padding for main content */
+      line-height: 1.6; /* Improve readability with line height */
+      text-align: center; /* Center-align all text in the main section */
+    }
+
+    article h2 {
+      color: #0a380a; /* Dark green color for headings */
+      margin-top: 20px; /* Space above headings */
+    }
+
+    footer {
+      background-color: #0b2f0b; /* Dark green background for footer */
+      color: white; /* White text for footer */
+      text-align: center; /* Center-align footer text */
+      padding: 10px 0; /* Padding for aesthetics */
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <h1>About us</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main-content" role="main">
+    <section class="hero-image" role="img" aria-label="Hero image of Gianni Versace">
+      <figure>
+        <img src="images/Gianni-Versace-Versace-Home.jpg" alt="Gianni Versace" />
+        <figcaption>Gianni Versace - Founder of the Versace Fashion House</figcaption>
+      </figure>
+    </section>
+
+    <article>
+      <h2>Our Story</h2>
+      <p>Founded in 1978 by the visionary designer <strong>Gianni Versace</strong>, the Versace brand has become synonymous with bold designs, vibrant prints, and luxurious craftsmanship. With a passion for art and culture, Versace revolutionized the fashion industry, combining elements of classical art with contemporary fashion.</p>
+
+      <h2>The Legacy of Gianni Versace</h2>
+      <p>Gianni Versace’s unique vision transformed the fashion world, introducing daring styles that celebrated individuality and self-expression. His designs often drew inspiration from Greek mythology, Renaissance art, and pop culture, making them instantly recognizable. Tragically, Gianni’s life was cut short in 1997, but his legacy continues to inspire new generations of designers and fashion enthusiasts.</p>
+
+      <h2>Iconic Collections</h2>
+      <ul>
+        <li><strong>Versace Couture:</strong> High-end, custom-made fashion that showcases the brand's craftsmanship and attention to detail.</li>
+        <li><strong>Versace Jeans Couture:</strong> A more casual, streetwear-inspired line that captures the essence of modern youth culture.</li>
+        <li><strong>Versace Home:</strong> A collection of luxurious home furnishings that reflect Versace's signature aesthetic.</li>
+        <li><strong>Versace Accessories:</strong> Iconic handbags, shoes, and jewelry that complete any outfit.</li>
+      </ul>
+
+      <h2>Significant Milestones</h2>
+      <ul>
+        <li><strong>1991:</strong> Versace becomes the first fashion house to launch a men's fragrance.</li>
+        <li><strong>1994:</strong> The brand showcases its iconic "Medusa" logo, which has become synonymous with luxury.</li>
+        <li><strong>2000:</strong> The introduction of the "Vanitas" collection, emphasizing modernity and urban lifestyle.</li>
+      </ul>
+
+      <div class="images-section">
+        <figure>
+          <img src="images/WhatsApp Image 2024-10-27 at 18.43.33_e685a940.jpg" alt="Versace Design 1" />
+          <figcaption>Stunning Versace Design 1</figcaption>
+        </figure>
+        <figure>
+          <img src="images/WhatsApp Image 2024-10-27 at 18.44.25_245fb48c.jpg" alt="Versace Design 2" />
+          <figcaption>Stunning Versace Design 2</figcaption>
+        </figure>
+      </div>
+
+      <h2>Continuing the Vision</h2>
+      <p>Today, Versace remains a leader in the fashion industry, committed to creativity, innovation, and luxury. The brand continues to expand its global presence with new stores, collaborations, and collections that resonate with a diverse audience.</p>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Versace | <a href="https://www.versace.com" style="color: white;">Official Website</a></p>
+  </footer>
+</body>
+</html>

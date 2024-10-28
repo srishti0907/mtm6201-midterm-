@@ -1,0 +1,240 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Helvetica', sans-serif;
+    background-color: #e96666;
+    color: #000;
+    animation: fadeBackground 10s infinite alternate; /* Infinite Background Fade */
+}
+
+@keyframes fadeBackground {
+    0% { background-color: #b5be4f; }
+    100% { background-color: #7b7534; }
+}
+
+/* Header Styles */
+header {
+    background-color: #1e1e1e; /* Darker background color */
+    padding: 30px; /* Increased padding for spacious feel */
+    text-align: center; /* Center-align header content */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    animation: slideDownFadeIn 1s ease forwards; /* Animation for header */
+    opacity: 0; /* Start with transparency */
+}
+
+@keyframes slideDownFadeIn {
+    0% {
+        opacity: 0; /* Start transparent */
+        transform: translateY(-20px); /* Start slightly higher */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Back to original position */
+    }
+}
+
+header h1 {
+    font-size: 2.5em; /* Increase font size of the title */
+    margin: 0; /* Remove default margin */
+    letter-spacing: 1px; /* Space between letters */
+    text-transform: uppercase; /* Uppercase text */
+}
+
+nav {
+    margin-top: 10px; /* Space above navigation links */
+}
+
+nav a {
+    margin: 0 20px; /* Increase spacing between links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text for navigation */
+    color: white; /* Keep text color white */
+    transition: color 0.3s; /* Transition for hover effect */
+    position: relative;
+    overflow: hidden;
+}
+
+nav a:hover {
+    color: #d4af37; /* Change color on hover (gold) */
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    left: -100%;
+    bottom: 0;
+    transition: left 0.4s ease-in-out; /* Underline Animation */
+}
+
+nav a:hover::after {
+    left: 0;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('../images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    color: white;
+    text-align: center;
+    animation: slideInFromLeft 2s ease-out, zoomIn 1s ease-in; /* Slide-in from Left and Zoom-in */
+    position: relative;
+}
+
+.hero h2 {
+    animation: textGlow 2s ease-in-out infinite alternate; /* Infinite Glow */
+}
+
+@keyframes textGlow {
+    0% { text-shadow: 0 0 10px #fff, 0 0 20px #fff; }
+    100% { text-shadow: 0 0 20px #ff6, 0 0 30px #ff6; }
+}
+
+/* Grid Layout for Collections */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin: 20px;
+}
+
+.grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.8s ease-in-out;
+    animation: rotateImage 10s linear infinite, steadyZoom 5s infinite alternate; /* Continuous Rotation and Steady Zoom */
+}
+
+@keyframes rotateImage {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Steady Zoom Animation */
+@keyframes steadyZoom {
+    0% {
+        transform: scale(1); /* Original size */
+    }
+    50% {
+        transform: scale(1.05); /* Zoom In */
+    }
+    100% {
+        transform: scale(1); /* Zoom Out */
+    }
+}
+
+/* Pop-In Animation */
+@keyframes popIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Form Styles */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea, button {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    animation: bounce 1.5s infinite alternate, zoomOut 1s ease-out; /* Continuous Bouncing and Zoom-out */
+    transition: box-shadow 0.3s;
+}
+
+button:hover {
+    animation: glow 1s infinite alternate; /* Infinite Glow on Hover */
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 5px #fff; }
+    50% { box-shadow: 0 0 20px #fff; }
+    100% { box-shadow: 0 0 5px #fff; }
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1e1e1e; /* Dark background for footer */
+    color: white; /* Text color for footer */
+    padding: 20px;
+    text-align: center; /* Center-align footer content */
+}
+
+.footer-content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Space out columns */
+    margin-bottom: 10px;
+}
+
+.footer-links,
+.footer-contact,
+.footer-social {
+    flex: 1; /* Equal flex-grow for each column */
+    margin: 10px; /* Space between columns */
+}
+
+.footer-bottom {
+    margin-top: 20px; /* Space above the bottom text */
+    font-size: 0.8em; /* Smaller text size */
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+    .hero {
+        padding: 150px 20px;
+    }
+}
+
+@media (min-width: 900px) {
+    .grid {
+        gap: 20px; /* Increase gap on larger screens */
+    }
+}
+
+/* Slide Animations */
+@keyframes slideInFromTop {
+    0% { transform: translateY(-100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+/* Zoom-In Animation */
+@keyframes zoomIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Zoom-Out Animation */
+@keyframes zoomOut {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0.5); opacity: 0; }
+}
